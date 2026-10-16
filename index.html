@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Women's Day 20/10 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+    background:
+        radial-gradient(ellipse at top, #5d164f, transparent 60%),
+        linear-gradient(145deg, #10071e, #260b32, #10071e);
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(2px 2px at 10% 20%, white 80%, transparent),
+        radial-gradient(2px 2px at 80% 30%, #ff9dd6 80%, transparent),
+        radial-gradient(2px 2px at 40% 70%, white 80%, transparent),
+        radial-gradient(2px 2px at 90% 85%, #ffc5ef 80%, transparent);
+    background-size: 180px 180px;
+    animation: twinkle 3s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: .3; }
+    to { opacity: 1; }
+}
+
+.screen {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 25px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 480px;
+    padding: 28px 20px;
+    border: 1px solid #ff9edb66;
+    border-radius: 28px;
+    background: #ffffff0d;
+    box-shadow: 0 0 45px #ff36b522;
+    backdrop-filter: blur(12px);
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ffb3e2;
+    border-radius: 30px;
+    color: #ffd5ed;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+h1 {
+    margin: 22px 0 12px;
+    font-size: clamp(29px, 8vw, 43px);
+    line-height: 1.25;
+    color: #ffb5e5;
+    text-shadow: 0 0 12px #ff38b5, 0 0 35px #ff38b5;
+}
+
+.subtitle {
+    color: #f9d8ed;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.flower {
+    margin: 24px 0;
+    font-size: 70px;
+    filter: drop-shadow(0 0 15px #ff61c4);
+    animation: sway 2.5s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-8deg) scale(1); }
+    50% { transform: rotate(8deg) scale(1.08); }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #72134d;
+    background: linear-gradient(100deg, #ffd1ec, #ff83cc, #ffc4e8);
+    padding: 15px 25px;
+    border-radius: 40px;
+    box-shadow: 0 0 22px #ff4eb777;
+    transition: transform .2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:active {
+    transform: scale(.94);
+}
+
+.hint {
+    margin-top: 18px;
+    color: #e8badc;
+    font-size: 12px;
+}
+
+#letter {
+    display: none;
+    margin-top: 25px;
+    animation: appear .8s ease;
+}
+
+#letter.show {
+    display: block;
+}
+
+#letter h2 {
+    color: #ffc4e8;
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px #ff48b7;
+}
+
+#letter p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #fff0fa;
+}
+
+.signature {
+    margin-top: 20px;
+    color: #ffb5e5;
+    font-style: italic;
+}
+
+#heart {
+    margin: 15px 0;
+    font-size: 58px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.18); }
+}
+
+.particle {
+    position: fixed;
+    top: -35px;
+    z-index: 5;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(500deg);
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+#replay {
+    margin-top: 22px;
+    font-size: 14px;
+    padding: 12px 20px;
+}
+
+@media (max-height: 650px) {
+    .screen { padding: 12px; }
+    .card { padding: 18px 16px; }
+    .flower { margin: 12px 0; font-size: 48px; }
+    h1 { margin: 12px 0; }
+}
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+
+<main class="screen">
+    <section class="card" id="card">
+
+        <div id="intro">
+            <span class="tag">SPECIAL DAY · 20.10</span>
+
+            <h1>Happy Women's Day</h1>
+
+            <p class="subtitle">
+                Một ngày thật đặc biệt dành cho những
+                người phụ nữ tuyệt vời 💗
+            </p>
+
+            <div class="flower">💐</div>
+
+            <button id="openBtn" onclick="openLetter()">
+                💌 Mở món quà bí mật
+            </button>
+
+            <p class="hint">Chạm vào nút để khám phá điều bất ngờ ✨</p>
+        </div>
+
+        <div id="letter">
+            <div id="heart">💖</div>
+
+            <h2>Chúc Mừng Ngày 20/10!</h2>
+
+            <p>
+                Chúc bạn luôn vui vẻ và hạnh phúc,
+                mỗi ngày đều có thật nhiều tiếng cười.
+                <br>
+                Mong mọi điều tốt đẹp sẽ đến với bạn,
+                những ước mơ sẽ dần trở thành hiện thực.
+                <br>
+                Luôn tự tin, tỏa sáng và được yêu thương
+                thật nhiều nhé! 🌷
+            </p>
+
+            <div class="flower">🌹</div>
+
+            <p class="signature">
+                Gửi bạn những điều ngọt ngào nhất ❤️
+            </p>
+
+            <button id="replay" onclick="replayEffect()">
+                ✨ Thêm phép màu
+            </button>
+        </div>
+
+    </section>
+</main>
+
+<script>
+let opened = false;
+
+function openLetter() {
+    if (opened) return;
+    opened = true;
+
+    document.getElementById("intro").classList.add("hidden");
+    document.getElementById("letter").classList.add("show");
+
+    launchParticles(65);
+}
+
+function launchParticles(amount) {
+    const symbols = ["💗", "💕", "🌸", "🌷", "✨", "💖", "🌹"];
+
+    for (let i = 0; i < amount; i++) {
+        const item = document.createElement("span");
+        item.className = "particle";
+        item.textContent =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+        item.style.left = Math.random() * 100 + "vw";
+        item.style.fontSize = (14 + Math.random() * 20) + "px";
+        item.style.animationDuration = (3 + Math.random() * 5) + "s";
+        item.style.animationDelay = Math.random() * 2 + "s";
+
+        document.body.appendChild(item);
+
+        item.addEventListener("animationend", () => item.remove());
+    }
+}
+
+function replayEffect() {
+    launchParticles(45);
+}
+</script>
+</body>
+</html>
